@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Risk Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333; /* Text color */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 500px; /* Increased width */
+            max-width: 90%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="number"], select {
+            width: calc(100% - 16px);
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus, select:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+        .image-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .image-container img {
+            width: 100px; /* Adjust size as needed */
+            border-radius: 50%; /* Circular image */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="luke-chesser-JKUTrJ4vK00-unsplash.jpg" alt="Image"> </div>
+
+        <h2>Credit Risk Prediction</h2>
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="DebtRatio">Debt Ratio:</label>
+                <input type="number" id="DebtRatio" name="DebtRatio" required>
+            </div>
+            <div class="form-group">
+                <label for="NumberOfOpenCreditLinesAndLoans">Number of Open Credit Lines and Loans:</label>
+                <input type="number" id="NumberOfOpenCreditLinesAndLoans" name="NumberOfOpenCreditLinesAndLoans" required>
+            </div>
+            <div class="form-group">
+                <label for="NumberRealEstateLoansOrLines">Number Real Estate Loans or Lines:</label>
+                <input type="number" id="NumberRealEstateLoansOrLines" name="NumberRealEstateLoansOrLines" required>
+            </div>
+            <div class="form-group">
+                <label for="MonthlyIncome_ran_sam">Monthly Income:</label>
+                <input type="number" id="MonthlyIncome_ran_sam" name="MonthlyIncome_ran_sam" required>
+            </div>
+            <div class="form-group">
+                <label for="NumberOfDependents_ran_sam">Number of Dependents:</label>
+                <input type="number" id="NumberOfDependents_ran_sam" name="NumberOfDependents_ran_sam" required>
+            </div>
+            <div class="form-group">
+                <label for="Education">Education:</label>
+                <select id="Education" name="Education" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Region_Central">Region Central (0 or 1):</label>
+                <input type="number" id="Region_Central" name="Region_Central" required>
+            </div>
+            <div class="form-group">
+                <label for="Region_East">Region East (0 or 1):</label>
+                <input type="number" id="Region_East" name="Region_East" required>
+            </div>
+            <div class="form-group">
+                <label for="Region_North">Region North (0 or 1):</label>
+                <input type="number" id="Region_North" name="Region_North" required>
+            </div>
+            <div class="form-group">
+                <label for="Region_West">Region West (0 or 1):</label>
+                <input type="number" id="Region_West" name="Region_West" required>
+            </div>
+
+            <button type="button" onclick="predict()">Predict</button>
+        </form>
+        <div id="result"></div>
+        <div class="footer">Project By Hema - Machine Learning</div>
+    </div>
+
+    <script>
+        //... your JavaScript code here...
+        function predict() {
+            const formData = new FormData(document.getElementById('predictionForm'));
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = parseFloat(value);
+            });
+
+            fetch('/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            })
+            .then(response => response.json())
+            .then(result => {
+                document.getElementById('result').textContent = result.prediction === 1 ? 'Bad Customer' : 'Good Customer';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('result').textContent = 'Error occurred during prediction.';
+            });
+        }
+    </script>
+</body>
+</html>

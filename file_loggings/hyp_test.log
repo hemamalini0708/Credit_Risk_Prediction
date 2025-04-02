@@ -1,0 +1,6 @@
+2025-04-02 17:12:07,616 - INFO - Targeted Columns : RevolvingUtilizationOfUnsecuredLines : 0.5543794125231316
+2025-04-02 17:12:07,616 - INFO - Targeted Columns : Rented_OwnHouse : 0.08748130646329363
+2025-04-02 17:12:07,616 - INFO - Targeted Columns : Occupation : 0.6678212093583445
+2025-04-02 17:12:07,616 - INFO - Targeted Columns : Gender_Female : 0.21745598814766845
+2025-04-02 17:12:07,616 - INFO - Targeted Columns : Gender_Male : 0.21745598814766845
+2025-04-02 17:12:07,617 - INFO - Targeted Columns : Region_South : 0.6018263577165577

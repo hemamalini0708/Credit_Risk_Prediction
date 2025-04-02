@@ -1,0 +1,90 @@
+2025-04-02 17:12:03,964 - INFO - Data loaded successfully
+2025-04-02 17:12:03,965 - INFO - The No.of Columns : 150002, The No.of Rows : 18
+2025-04-02 17:12:04,014 - WARNING - Columns with null values : ['NPA Status', 'RevolvingUtilizationOfUnsecuredLines', 'age', 'Gender', 'Region', 'MonthlyIncome', 'Rented_OwnHouse', 'Occupation', 'Education', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio', 'MonthlyIncome.1', 'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate', 'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse', 'NumberOfDependents', 'Good_Bad']
+2025-04-02 17:12:04,088 - WARNING - Columns with null values : ['MonthlyIncome', 'MonthlyIncome.1', 'NumberOfDependents']
+2025-04-02 17:12:06,856 - INFO - Both Columns Having The same data : [MonthlyIncome] : [MonthlyIncome.1]
+2025-04-02 17:12:06,946 - INFO - Size Of Traning Data : 120000, 120000
+2025-04-02 17:12:06,946 - INFO - Size Of Testing Data : 30000, 30000
+2025-04-02 17:12:06,947 - INFO - Dtype of MonthlyIncome : float64
+2025-04-02 17:12:06,947 - INFO - Dtype of NumberOfDependents : object
+2025-04-02 17:12:07,000 - INFO - Dtype of NumberOfDependents : float64
+2025-04-02 17:12:07,000 - INFO - Dtype of NumberOfDependents column converted into numerical sucessfully
+2025-04-02 17:12:07,098 - INFO - Null Values in Trainig Data : NPA Status                              0
+RevolvingUtilizationOfUnsecuredLines    0
+age                                     0
+Gender                                  0
+Region                                  0
+Rented_OwnHouse                         0
+Occupation                              0
+Education                               0
+NumberOfTime30-59DaysPastDueNotWorse    0
+DebtRatio                               0
+NumberOfOpenCreditLinesAndLoans         0
+NumberOfTimes90DaysLate                 0
+NumberRealEstateLoansOrLines            0
+NumberOfTime60-89DaysPastDueNotWorse    0
+MonthlyIncome_random_sample             0
+NumberOfDependents_random_sample        0
+dtype: int64
+2025-04-02 17:12:07,106 - INFO - Null Values in Testing Data : NPA Status                              0
+RevolvingUtilizationOfUnsecuredLines    0
+age                                     0
+Gender                                  0
+Region                                  0
+Rented_OwnHouse                         0
+Occupation                              0
+Education                               0
+NumberOfTime30-59DaysPastDueNotWorse    0
+DebtRatio                               0
+NumberOfOpenCreditLinesAndLoans         0
+NumberOfTimes90DaysLate                 0
+NumberRealEstateLoansOrLines            0
+NumberOfTime60-89DaysPastDueNotWorse    0
+MonthlyIncome_random_sample             0
+NumberOfDependents_random_sample        0
+dtype: int64
+2025-04-02 17:12:07,125 - INFO - Catgeorical column from the data : Index(['Gender', 'Region', 'Rented_OwnHouse', 'Occupation', 'Education'], dtype='object')
+2025-04-02 17:12:07,125 - INFO - Categorical Columns from the data  : Index(['Gender', 'Region', 'Rented_OwnHouse', 'Occupation', 'Education'], dtype='object')
+2025-04-02 17:12:07,374 - INFO - Outliers handled from the training and testing data successfully
+2025-04-02 17:12:07,375 - INFO - Feature Engineering Completed 
+2025-04-02 17:12:07,416 - INFO - Concatinated Both columns  Successfully
+2025-04-02 17:12:07,416 - INFO - Size Of the Traning Data : (120000, 21)
+2025-04-02 17:12:07,416 - INFO - Size Of The Testing Data : (30000, 21)
+2025-04-02 17:12:07,453 - INFO - Columns with 0.1 variance are : Index(['NPA Status'], dtype='object')
+2025-04-02 17:12:07,464 - INFO - After Removing Some Unwanted Columns there shape are : (120000, 20)
+2025-04-02 17:12:07,478 - INFO - Converted Column values Good - 1 and Bad - 0 successfully
+2025-04-02 17:12:07,626 - INFO - After Removing unwanted columns using Hypothesisi testing  from train data : (120000, 14)
+2025-04-02 17:12:07,626 - INFO - After removing unwanted columns using hypothesis testing from test data: (30000, 14)
+2025-04-02 17:12:07,626 - INFO - Before Upsampling Technique
+2025-04-02 17:12:07,638 - INFO - No Of Rows for 0 : 8070
+2025-04-02 17:12:07,653 - INFO - No Of Rows for 1 : 111930
+2025-04-02 17:12:07,855 - INFO - After Upsampling Technique
+2025-04-02 17:12:07,873 - INFO - No Of Rows for 0 : 111930
+2025-04-02 17:12:07,895 - INFO - No Of Rows for 1 : 111930
+2025-04-02 17:12:07,916 - INFO - info :     age  NumberOfTime30-59DaysPastDueNotWorse  DebtRatio  NumberOfOpenCreditLinesAndLoans  ...  Region_Central  Region_East  Region_North  Region_West
+0  38.0                                   1.0   0.298281                              4.0  ...             0.0          0.0           0.0          1.0
+1  55.0                                   0.0   0.835333                             11.0  ...             0.0          0.0           0.0          0.0
+2  34.0                                   0.0   0.295328                              6.0  ...             1.0          0.0           0.0          0.0
+
+[3 rows x 14 columns]
+2025-04-02 17:12:07,995 - INFO - info : [[-0.81331629 -0.02935516 -0.20304618 ... -0.37085676 -0.61365283
+   1.58632345]
+ [ 0.41801896 -0.15686436 -0.20270332 ... -0.37085676 -0.61365283
+  -0.75917368]
+ [-1.10304223 -0.15686436 -0.20304807 ... -0.37085676 -0.61365283
+  -0.75917368]
+ ...
+ [-0.50646703 -0.12672028 -0.20294901 ... -0.37085676  1.93292839
+  -0.75917368]
+ [-0.62492105 -0.14153742 -0.20321364 ... -0.37085676 -0.30754711
+  -0.75917368]
+ [-1.78175742 -0.06949224 -0.05448618 ... -0.37085676 -0.61365283
+   1.58632345]]
+2025-04-02 17:12:08,535 - INFO - Model prediction  : Bad Customer
+2025-04-02 17:12:08,535 - INFO - columns names : Index(['age', 'NumberOfTime30-59DaysPastDueNotWorse', 'DebtRatio',
+       'NumberOfOpenCreditLinesAndLoans', 'NumberOfTimes90DaysLate',
+       'NumberRealEstateLoansOrLines', 'NumberOfTime60-89DaysPastDueNotWorse',
+       'MonthlyIncome_random_sample', 'NumberOfDependents_random_sample',
+       'Education', 'Region_Central', 'Region_East', 'Region_North',
+       'Region_West'],
+      dtype='object')
