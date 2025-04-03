@@ -155,5 +155,3 @@ For my work you can follow:
 
 
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hema-malini-1434bb29b)
-
-[Medium](https://medium.com/@korlakuntasaikamal10)
