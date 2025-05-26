@@ -1,5 +1,8 @@
+# **💳 Credit Card Risk Prediction**
 
-# Fraud Analysis on the Customers:
+**# Fraud Analysis on the Customers:**
+
+**DEMO :- **  https://www.loom.com/share/4868d6bc806642c283b1e8cc0d3dc43c?sid=1bbf3785-7570-47ed-8fc0-a977a6632a4d
 
 In this Repo , I have done a Project on machine learning classification problem statement Which requires a Huge dataset where I got it from 3rd part websites and don't worry I want to share the dataset with you and you can get it from here:
 
@@ -118,14 +121,14 @@ Finally It takes lot of time for Data Analysis and model developement part but f
 Entire code and hidden information You can get it from the above coding file:
 
 
-## Authors
+**## Authors**
 
-- [ Soledad Galli ](https://github.com/solegalli)
-
-
+**Hema Malini**
 
 
-## 🛠 Skills
+
+
+**## 🛠 Skills**
 
         1.Python 
         2.Machine learning 
@@ -138,20 +141,12 @@ Entire code and hidden information You can get it from the above coding file:
     
 
 
-## Support
+**## Support**
 
-For support, email hemamalinig07@gmail.com .
+**For support, email hemamalinig07@gmail.com .**
 
 
-## Acknowledgements
+**## Acknowledgements**
 
  - [feature engine](https://feature-engine.trainindata.com/en/latest/)
  - [Sklearn](https://scikit-learn.org/stable/)
-
-
-## 🔗 Links
-
-For my work you can follow:
-
-
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/hema-malini-1434bb29b)
