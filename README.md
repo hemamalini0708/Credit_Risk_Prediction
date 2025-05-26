@@ -2,7 +2,7 @@
 
 **# Fraud Analysis on the Customers:**
 
-**DEMO :- **  https://www.loom.com/share/4868d6bc806642c283b1e8cc0d3dc43c?sid=1bbf3785-7570-47ed-8fc0-a977a6632a4d
+**DEMO :-**  https://www.loom.com/share/4868d6bc806642c283b1e8cc0d3dc43c?sid=1bbf3785-7570-47ed-8fc0-a977a6632a4d
 
 In this Repo , I have done a Project on machine learning classification problem statement Which requires a Huge dataset where I got it from 3rd part websites and don't worry I want to share the dataset with you and you can get it from here:
 
