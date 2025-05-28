@@ -1,4 +1,4 @@
-# **💳 Credit Card Risk Prediction**
+# **Credit Card Risk Prediction**
 
 **# Fraud Analysis on the Customers:**
 
